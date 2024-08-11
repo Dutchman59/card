@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style>
+        Body {
+            Display: flex;
+            Flex-direction:column;
+            Align-items: center;
+           Background: pink;
+           Margin: 20px;
+           Padding: 20px;
+
+        }
+        .container
+        {
+            Width: max-content;
+            Margin-top: 100px;
+
+            
+        }
+        .para
+        {
+           
+            Font-weight: bold;
+        }
+        .span
+        {
+            color: #ff2b5f;
+        }
+        .button
+        {
+            Margin-top:125px;
+            Margin-left: 50px;
+            Background: transparent; 
+            Border-radius: 8px;
+            
+        }
+        .back
+        {
+            Text-decoration: none;
+            Color:black;
+            Font-size: 50px;
+            Color: #ff5574;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+       <h2 class="para"> Where our love journey began..<br> <span class="span">will never forget this place bcos <br>it introduced me to you </span>,, <br>That's why i feel it like home,, <br>where i felt real love 😍</h2>
+    </div>
+    <button class="button">
+        <a class="back" href="index.html">☜BACK</a>
+    </button>
+    <script>
+        const defaults = {
+  spread: 360,
+  ticks: 100,
+  gravity: 0,
+  decay: 0.94,
+  startVelocity: 30,
+  shapes: ["heart"],
+  colors: ["#3115ff", "#ff152a"],
+};
+
+confetti({
+  ...defaults,
+  particleCount: 50,
+  scalar: 2,
+});
+
+confetti({
+  ...defaults,
+  particleCount: 25,
+  scalar: 3,
+});
+
+confetti({
+  ...defaults,
+  particleCount: 10,
+  scalar: 4,
+});
+        
+    </script>
+</body>
+</html>

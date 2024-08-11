@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <style>
+        Body {
+            Display: flex;
+            Flex-direction:column;
+            Align-items: center;
+           Background: pink;
+           Margin: 20px;
+           Padding: 20px;
+
+        }
+        .container
+        {
+            Width: max-content;
+            Margin-top: 100px;
+
+            
+        }
+        .para
+        {
+           
+            Font-weight: bold;
+        }
+        .span
+        {
+            color: #ff2b5f;
+        }
+        .button
+        {
+            
+            
+            Background: transparent; 
+            Border-radius: 8px;
+            
+        }
+        .back
+        {
+            Text-decoration: none;
+            Color:black;
+            Font-size: 50px;
+            Color: #ff5574;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+       <h2 class="para"> you know where this is...<br> <span class="span">the place where our blessings lie <br> after all if it never existed <br>neither would you have </span>,, <br><br>the day is coming when we visit it 🤗</h2>
+    </div>
+    <button class="button">
+        <a class="back" href="index.html">☜BACK</a>
+    </button>
+    <script>
+        const duration = 15 * 1000,
+  animationEnd = Date.now() + duration,
+  defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const interval = setInterval(function() {
+  const timeLeft = animationEnd - Date.now();
+
+  if (timeLeft <= 0) {
+    return clearInterval(interval);
+  }
+
+  const particleCount = 50 * (timeLeft / duration);
+
+  // since particles fall down, start a bit higher than random
+  confetti(
+    Object.assign({}, defaults, {
+      particleCount,
+      origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+    })
+  );
+  confetti(
+    Object.assign({}, defaults, {
+      particleCount,
+      origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+    })
+  );
+}, 250);
+    </script>
+</body>
+</html>
